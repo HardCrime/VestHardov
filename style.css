@@ -1,0 +1,130 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #2e004f, #6a0dad, #3e0f63, #9a4fff);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  animation: fadeIn 2s ease;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #e0b3ff;
+  animation: slideDown 1.5s ease;
+}
+
+.nav button {
+  background: #8a2be2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s, transform 0.3s ease;
+}
+
+.nav button:hover {
+  background: #a14ff2;
+  transform: scale(1.05);
+}
+
+.section {
+  display: none;
+  margin-top: 20px;
+  animation: fadeIn 1s ease;
+}
+
+a {
+  color: #ffd9ff;
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.roulette-wrapper {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(4px);
+}
+
+.wheel {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 8px solid #fff;
+  background: conic-gradient(
+    #8e44ad 0deg 40deg,
+    #9b59b6 40deg 80deg,
+    #3498db 80deg 120deg,
+    #e74c3c 120deg 160deg,
+    #f1c40f 160deg 200deg,
+    #2ecc71 200deg 240deg,
+    #e67e22 240deg 280deg,
+    #1abc9c 280deg 320deg,
+    #34495e 320deg 360deg
+  );
+  transition: transform 4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+#spinButton {
+  margin-top: 20px;
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+#spinButton:hover {
+  background: #a29bfe;
+}
+
+#resultText {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ffd9ff;
+}
+
+/* Адаптация */
+@media (max-width: 600px) {
+  .title { font-size: 2rem; }
+  .nav button { padding: 8px 14px; font-size: 14px; }
+  .wheel { width: 150px; height: 150px; }
+}

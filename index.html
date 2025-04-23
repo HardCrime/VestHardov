@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HardCrime</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">HardCrime</h1>
+    <div class="nav">
+      <button onclick="toggleSection('bio')">Биография</button>
+      <button onclick="toggleSection('contacts')">Контакты</button>
+      <button onclick="toggleSection('projects')">Проекты</button>
+      <button onclick="toggleSection('channel')">Канал</button>
+      <button onclick="toggleSection('roulette')">Рулетка</button>
+    </div>
+    
+    <div class="section" id="bio">
+      <p>Биография: <a href="https://t.me/avanbiolog" target="_blank">t.me/avanbiolog</a></p>
+    </div>
+
+    <div class="section" id="contacts">
+      <p>Написать мне: <a href="https://t.me/VestHardov" target="_blank">@VestHardov</a></p>
+    </div>
+
+    <div class="section" id="projects">
+      <p>Проект «Восхождение»: <a href="https://t.me/+_qjY_Dqsb9E3YTE5" target="_blank">Смотреть</a></p>
+    </div>
+
+    <div class="section" id="channel">
+      <p>Канал Крайм: <a href="https://t.me/ReturnCrimeSquad" target="_blank">ReturnCrimeSquad</a></p>
+    </div>
+
+    <div class="section" id="roulette">
+      <div class="roulette-wrapper">
+        <div class="wheel" id="wheel"></div>
+        <button id="spinButton" onclick="spin()">Крутить</button>
+        <p id="resultText"></p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
